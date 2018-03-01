@@ -18,7 +18,7 @@ if ( ! defined( 'WPINC' ) ) {
 
 // Create a plan with the product field 
 // https://stripe.com/docs/api#create_plan
-add_filter( 'leaky_paywall_create_stripe_plan', 'lp_create_product_for_stripe_plan' );
+add_filter( 'leaky_paywall_create_stripe_plan', 'lp_create_product_for_stripe_plan', 10, 3 );
 
 function lp_create_product_for_stripe_plan( $args, $level, $level_id ) {
 
