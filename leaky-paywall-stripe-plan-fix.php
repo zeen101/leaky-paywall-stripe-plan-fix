@@ -24,7 +24,6 @@ function lp_create_product_for_stripe_plan( $args, $level, $level_id ) {
 
 	$args['product'] = array(
 		'name' => esc_js( $level['label'] ) . ' ' . time(),
-		'type'	=> 'service'
 	);
 
 	unset( $args['name'] );
